@@ -89,7 +89,7 @@ export default function Header() {
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      'relative text-sm font-medium tracking-wide transition-colors duration-300 py-1',
+                      'group relative text-sm font-medium tracking-wide transition-colors duration-300 py-1',
                       isTransparent
                         ? active
                           ? 'text-white'

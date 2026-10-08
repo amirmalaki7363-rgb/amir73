@@ -7,8 +7,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 animate-scale-in">
         <img
-          src="https://images.unsplash.com/photo-1762811054947-605b20298615?auto=format&fit=crop&w=2000&q=80"
-          alt="Modern luxury villa at twilight with reflecting pool"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+          alt="Modern luxury home at twilight with glass walls and swimming pool"
           className="w-full h-full object-cover"
           loading="eager"
           fetchPriority="high"
@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
 
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/30 to-navy/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/20 to-navy/70" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
