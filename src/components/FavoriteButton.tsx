@@ -34,7 +34,7 @@ export default function FavoriteButton({ propertyId, className = '' }: FavoriteB
   return (
     <button
       onClick={toggle}
-      aria-label={isFav ? 'Remove from favorites' : 'Save to favorites'}
+      aria-label={isFav ? 'حذف از علاقه‌مندی‌ها' : 'افزودن به علاقه‌مندی‌ها'}
       aria-pressed={isFav}
       className={cn(
         'inline-flex items-center gap-2 px-5 py-3 border transition-all duration-500 ease-luxury min-h-[48px]',
@@ -45,8 +45,8 @@ export default function FavoriteButton({ propertyId, className = '' }: FavoriteB
       )}
     >
       <HeartIcon className="w-5 h-5" filled={isFav} />
-      <span className="text-sm font-medium uppercase tracking-wide">
-        {isFav ? 'Saved' : 'Save'}
+      <span className="text-sm font-medium tracking-wide">
+        {isFav ? 'ذخیره شد' : 'ذخیره'}
       </span>
     </button>
   );

@@ -16,7 +16,7 @@ export interface Property {
   state: string;
   country: string;
   price: number;
-  type: 'Villa' | 'House' | 'Estate' | 'Residence' | 'Penthouse' | 'Apartment';
+  type: 'ویلا' | 'خانه' | 'ملک' | 'اقامتگاه' | 'پنت‌هاوس' | 'آپارتمان';
   bedrooms: number;
   bathrooms: number;
   sqft: number;
@@ -43,32 +43,32 @@ const gallery = (ids: string[]) => ids.map((id) => img(id, 1400, 900));
 
 // ─── Shared agents ─────────────────────────────────────────
 const agentDaniel: Agent = {
-  name: 'Daniel Morgan',
-  role: 'Managing Director',
+  name: 'دنیل مورگان',
+  role: 'مدیرعامل',
   phone: '(555) 246-7890',
   email: 'daniel@horizonproperties.com',
   image: img('1507003211169-0a1dd7228f2d', 400, 400),
 };
 
 const agentOlivia: Agent = {
-  name: 'Olivia Carter',
-  role: 'Luxury Property Advisor',
+  name: 'اولیویا کارتر',
+  role: 'مشاور املاک لوکس',
   phone: '(555) 246-7891',
   email: 'olivia@horizonproperties.com',
   image: img('1438761681033-6461ffad8d80', 400, 400),
 };
 
 const agentJames: Agent = {
-  name: 'James Wilson',
-  role: 'Investment Consultant',
+  name: 'جیمز ویلسون',
+  role: 'مشاور سرمایه‌گذاری',
   phone: '(555) 246-7892',
   email: 'james@horizonproperties.com',
   image: img('1500648767791-00dcc994a43e', 400, 400),
 };
 
 const agentSophia: Agent = {
-  name: 'Sophia Bennett',
-  role: 'Senior Property Specialist',
+  name: 'سوفیا بنت',
+  role: 'متخصص ارشد املاک',
   phone: '(555) 246-7893',
   email: 'sophia@horizonproperties.com',
   image: img('1524504388940-b1c1722653e1', 400, 400),
@@ -102,31 +102,31 @@ export const properties: Property[] = [
   {
     id: '1',
     slug: 'lakeside-modern-villa',
-    name: 'Lakeside Modern Villa',
-    location: 'Austin, Texas, USA',
+    name: 'ویلا مدرن ساحلی',
+    location: 'آستین، تگزاس، آمریکا',
     city: 'Austin',
     state: 'Texas',
     country: 'USA',
     price: 2_350_000,
-    type: 'Villa',
+    type: 'ویلا',
     bedrooms: 5,
     bathrooms: 4,
     sqft: 6200,
-    lotSize: '0.8 acres',
+    lotSize: '۰.۸ هکتار',
     yearBuilt: 2021,
     description:
-      'A stunning architectural masterpiece set on the shores of Lake Austin. This villa features floor-to-ceiling glass walls that dissolve the boundary between interior and landscape, a resort-style infinity pool, and meticulously designed living spaces that embody the pinnacle of modern luxury living.',
+      'شاهکار معماری خیره‌کننده‌ای در ساحل دریاچه آستین. این ویلا دارای دیوارهای شیشه‌ای از کف تا سقف است که مرز میان فضای داخلی و منظره را از بین می‌برد، یک استخر بی‌نهایت ریزورتی و فضاهای زندگی با طراحی دقیق که نهایت زندگی لوکس مدرن را تجسم می‌کند.',
     features: [
-      'Floor-to-ceiling glass walls',
-      'Infinity pool with lake views',
-      'Smart home automation',
-      'Chef\'s kitchen with Wolf appliances',
-      'Primary suite with private terrace',
-      'Wine cellar',
-      'Home theater',
-      'Three-car garage',
+      'دیوارهای شیشه‌ای از کف تا سقف',
+      'استخر بی‌نهایت با چشم‌انداز دریاچه',
+      'سیستم خانه هوشمند',
+      'آشپزخانه حرفه‌ای با لوازم Wolf',
+      'مستربد با تراس خصوصی',
+      'انبار شراب',
+      'سینمای خانگی',
+      'گاراژ سه‌ ماشین',
     ],
-    amenities: ['Pool', 'Smart Home', 'Wine Cellar', 'Home Theater', 'Garage', 'Gym'],
+    amenities: ['استخر', 'خانه هوشمند', 'انبار شراب', 'سینمای خانگی', 'گاراژ', 'باشگاه'],
     images: gallery([
       '1580587771525-78b9dba3b914',
       '1706808849780-7a04fbac83ef',
@@ -139,30 +139,30 @@ export const properties: Property[] = [
   {
     id: '2',
     slug: 'pacific-glass-house',
-    name: 'Pacific Glass House',
-    location: 'Malibu, California, USA',
+    name: 'خانه شیشه‌ای پاسیفیک',
+    location: 'مالیبو، کالیفرنیا، آمریکا',
     city: 'Malibu',
     state: 'California',
     country: 'USA',
     price: 4_800_000,
-    type: 'House',
+    type: 'خانه',
     bedrooms: 6,
     bathrooms: 5,
     sqft: 8400,
-    lotSize: '1.2 acres',
+    lotSize: '۱.۲ هکتار',
     yearBuilt: 2022,
     description:
-      'Perched on the Malibu coastline, this architectural gem offers uninterrupted Pacific Ocean views through its transparent glass facade. The design seamlessly integrates indoor and outdoor living with expansive terraces, a vanishing-edge pool, and interiors curated with the finest materials.',
+      'نشسته بر ساحل مالیبو، این جواهر معماری چشم‌اندازهای uninterrupted اقیانوس آرام را از طریق نما شیشه‌ای شفاف خود ارائه می‌دهد. طراحی آن زندگی داخلی و خارجی را با تراس‌های وسیع، استخر لبه ناپدید و فضاهای داخلی تزئین شده با بهترین متریال‌ها تلفیق می‌کند.',
     features: [
-      'Panoramic ocean views',
-      'Vanishing-edge pool',
-      'Glass-enclosed living pavilion',
-      'Outdoor kitchen and dining',
-      'Private beach access',
-      'Solar power system',
-      'Spa and wellness center',
+      'چشم‌انداز پانوراما اقیانوس',
+      'استخر لبه ناپدید',
+      'سالن زندگی محصور در شیشه',
+      'آشپزخانه و غذاخوری روباز',
+      'دسترسی خصوصی به ساحل',
+      'سیستم انرژی خورشیدی',
+      'مرکز اسپا و سلامت',
     ],
-    amenities: ['Ocean View', 'Pool', 'Spa', 'Solar Power', 'Beach Access', 'Outdoor Kitchen'],
+    amenities: ['چشم‌انداز اقیانوس', 'استخر', 'اسپا', 'انرژی خورشیدی', 'دسترسی ساحل', 'آشپزخانه روباز'],
     images: gallery([
       '1600047509807-ba8f99d2cdde',
       '1719887805632-de5be825f72b',
@@ -175,29 +175,29 @@ export const properties: Property[] = [
   {
     id: '3',
     slug: 'desert-horizon-estate',
-    name: 'Desert Horizon Estate',
-    location: 'Scottsdale, Arizona, USA',
+    name: 'ملک افق کویر',
+    location: 'اسکاتس‌دیل، آریزونا، آمریکا',
     city: 'Scottsdale',
     state: 'Arizona',
     country: 'USA',
     price: 3_150_000,
-    type: 'Estate',
+    type: 'ملک',
     bedrooms: 4,
     bathrooms: 4,
     sqft: 5500,
-    lotSize: '2.5 acres',
+    lotSize: '۲.۵ هکتار',
     yearBuilt: 2020,
     description:
-      'A serene desert retreat that harmonizes with its natural surroundings. Clean lines, warm stone, and rammed-earth walls create a sophisticated sanctuary. The estate features a reflection pool, shaded courtyards, and panoramic views of the McDowell Mountains.',
+      'اقامتگاه آرام صحرایی که با محیط طبیعی خود هماهنگ است. خطوط تمیز، سنگ گرم و دیوارهای خاک فشرده پناهگاهی پیچیده ایجاد می‌کنند. این ملک دارای استخر انعکاسی، حیاط‌های سایه‌دار و چشم‌انداز پانوراما کوه‌های مک‌داول است.',
     features: [
-      'Rammed-earth and stone walls',
-      'Reflection pool',
-      'Shaded courtyard living',
-      'Mountain views',
-      'Native desert landscaping',
-      'Detached guest casita',
+      'دیوارهای خاک فشرده و سنگی',
+      'استخر انعکاسی',
+      'زندگی در حیاط سایه‌دار',
+      'چشم‌انداز کوهستان',
+      'باغبانی کویری بومی',
+      'کاسیتای مهمان جداگانه',
     ],
-    amenities: ['Pool', 'Mountain View', 'Guest House', 'Courtyard', 'Garage'],
+    amenities: ['استخر', 'چشم‌انداز کوهستان', 'خانه مهمان', 'حیاط', 'گاراژ'],
     images: gallery([
       '1698994705178-d244d73ea573',
       '1613490493576-7fde63acd811',
@@ -210,29 +210,29 @@ export const properties: Property[] = [
   {
     id: '4',
     slug: 'oceanfront-residence',
-    name: 'Oceanfront Residence',
-    location: 'Miami, Florida, USA',
+    name: 'اقامتگاه ساحلی',
+    location: 'میامی، فلوریدا، آمریکا',
     city: 'Miami',
     state: 'Florida',
     country: 'USA',
     price: 5_200_000,
-    type: 'Residence',
+    type: 'اقامتگاه',
     bedrooms: 5,
     bathrooms: 6,
     sqft: 7200,
-    lotSize: '0.5 acres',
+    lotSize: '۰.۵ هکتار',
     yearBuilt: 2023,
     description:
-      'An iconic oceanfront residence defining modern coastal luxury. With 200 feet of private waterfront, a rooftop terrace, and interiors by an award-winning designer, this home is a statement of refined tropical living at its finest.',
+      'اقامتگاه نمادین ساحلی که لوکس ساحلی مدرن را تعریف می‌کند. با ۲۰۰ فوت خط ساحلی خصوصی، تراس پشت بامی و فضاهای داخلی توسط یک طراح برنده جایزه، این خانه بیانیه‌ای از زندگی استوایی ظریف در بهترین شکل آن است.',
     features: [
-      '200 ft of private waterfront',
-      'Rooftop terrace with ocean views',
-      'Infinity-edge pool',
-      'Private dock',
-      'Hurricane-rated glass',
-      'Summer kitchen',
+      '۲۰۰ فوت خط ساحلی خصوصی',
+      'تراس پشت بامی با چشم‌انداز اقیانوس',
+      'استخر لبه بی‌نهایت',
+      'اسکله خصوصی',
+      'شیشه تایید شده طوفان',
+      'آشپزخانه تابستانی',
     ],
-    amenities: ['Ocean View', 'Pool', 'Dock', 'Rooftop Terrace', 'Garage', 'Gym'],
+    amenities: ['چشم‌انداز اقیانوس', 'استخر', 'اسکله', 'تراس پشت بام', 'گاراژ', 'باشگاه'],
     images: gallery([
       '1628012209120-d9db7abf7eab',
       '1502672260266-1c1ef2d93688',
@@ -245,29 +245,29 @@ export const properties: Property[] = [
   {
     id: '5',
     slug: 'modern-hillside-retreat',
-    name: 'Modern Hillside Retreat',
-    location: 'Los Angeles, California, USA',
+    name: 'اقامتگاه مدرن دامنه',
+    location: 'لس‌آنجلس، کالیفرنیا، آمریکا',
     city: 'Los Angeles',
     state: 'California',
     country: 'USA',
     price: 3_750_000,
-    type: 'House',
+    type: 'خانه',
     bedrooms: 4,
     bathrooms: 3,
     sqft: 4800,
-    lotSize: '0.6 acres',
+    lotSize: '۰.۶ هکتار',
     yearBuilt: 2021,
     description:
-      'A sculptural hillside home offering breathtaking views of the Los Angeles basin. Cantilevered terraces, a zero-edge pool, and a material palette of steel, glass, and warm wood create a residence that is both bold and intimately connected to its landscape.',
+      'خانه‌ای مجسمه‌وار در دامنه تپه با چشم‌اندازهای خیره‌کننده حوضه لس‌آنجلس. تراس‌های کنسولی، استخر لبه صفر و پالت متریال فولاد، شیشه و چوب گرم اقامتی خلق می‌کنند که هم جسور و هم پیوند عمیق با منظره است.',
     features: [
-      'Cantilevered terraces',
-      'Zero-edge pool',
-      'City and ocean views',
-      'Open-plan living',
-      'Floating staircase',
-      'EV charging station',
+      'تراس‌های کنسولی',
+      'استخر لبه صفر',
+      'چشم‌انداز شهر و اقیانوس',
+      'زندگی بازطراحی',
+      'پله معلق',
+      'ایستگاه شارژ خودرو برقی',
     ],
-    amenities: ['Pool', 'City View', 'Garage', 'EV Charging', 'Smart Home'],
+    amenities: ['استخر', 'چشم‌انداز شهر', 'گاراژ', 'شارژ برقی', 'خانه هوشمند'],
     images: gallery([
       '1721815693498-cc28507c0ba2',
       '1600607687939-ce8a6c25118c',
@@ -280,29 +280,29 @@ export const properties: Property[] = [
   {
     id: '6',
     slug: 'palm-garden-residence',
-    name: 'Palm Garden Residence',
-    location: 'Beverly Hills, California, USA',
+    name: 'اقامتگاه باغ نخل',
+    location: 'بورلی هیلز، کالیفرنیا، آمریکا',
     city: 'Beverly Hills',
     state: 'California',
     country: 'USA',
     price: 6_400_000,
-    type: 'Estate',
+    type: 'ملک',
     bedrooms: 7,
     bathrooms: 8,
     sqft: 11000,
-    lotSize: '1.5 acres',
+    lotSize: '۱.۵ هکتار',
     yearBuilt: 2022,
     description:
-      'A grand estate in the heart of Beverly Hills, enveloped by mature palms and manicured gardens. The residence features a double-height entry, a film-grade kitchen, an Olympic-length pool, and a separate wellness pavilion with sauna and steam rooms.',
+      'ملکی باشکوه در قلب بورلی هیلز، احاطه شده با نخل‌های بالغ و باغ‌های منظم. این اقامتگاه دارای ورودی دو طبقه، آشپزخانه درجه فیلم، استخر المپیکی و پاویون سلامت جداگانه با سونا و حمام بخار است.',
     features: [
-      'Double-height grand entry',
-      'Olympic-length pool',
-      'Wellness pavilion',
-      'Formal gardens with palms',
-      'Motor court with fountain',
-      'Staff quarters',
+      'ورودی دو طبقه باشکوه',
+      'استخر المپیکی',
+      'پاویون سلامت',
+      'باغ‌های رسمی با نخل',
+      'حیاط موتور با فواره',
+      'محل کارکنان',
     ],
-    amenities: ['Pool', 'Gym', 'Spa', 'Garden', 'Staff Quarters', 'Garage', 'Smart Home'],
+    amenities: ['استخر', 'باشگاه', 'اسپا', 'باغ', 'محل کارکنان', 'گاراژ', 'خانه هوشمند'],
     images: gallery([
       '1719887805632-de5be825f72b',
       '1600047509807-ba8f99d2cdde',
@@ -315,29 +315,29 @@ export const properties: Property[] = [
   {
     id: '7',
     slug: 'contemporary-lake-house',
-    name: 'Contemporary Lake House',
-    location: 'Lake Tahoe, Nevada, USA',
+    name: 'خانه دریاچه‌ای مدرن',
+    location: 'لیک تاهو، نوادا، آمریکا',
     city: 'Lake Tahoe',
     state: 'Nevada',
     country: 'USA',
     price: 2_950_000,
-    type: 'House',
+    type: 'خانه',
     bedrooms: 4,
     bathrooms: 3,
     sqft: 4200,
-    lotSize: '0.4 acres',
+    lotSize: '۰.۴ هکتار',
     yearBuilt: 2019,
     description:
-      'A warm modern lake house wrapped in cedar and stone, offering direct lake access and panoramic water views. The design balances rustic warmth with clean modernism, featuring a stone fireplace, a lakeside deck, and a hot tub under the pines.',
+      'خانه دریاچه‌ای مدرن و گرم پیچیده در سدر و سنگ، با دسترسی مستقیم به دریاچه و چشم‌انداز پانوراما آب. طراحی آن گرمای روستیک را با مدرنیسم تمیز متعادل می‌کند و دارای شومینه سنگی، عرشه دریاچه‌ای و جکوزی زیر کاج‌ها است.',
     features: [
-      'Direct lake access',
-      'Private dock',
-      'Stone fireplace',
-      'Lakeside deck',
-      'Hot tub',
-      'Cedar and stone exterior',
+      'دسترسی مستقیم به دریاچه',
+      'اسکله خصوصی',
+      'شومینه سنگی',
+      'عرشه دریاچه‌ای',
+      'جکوزی',
+      'نمای سدر و سنگ',
     ],
-    amenities: ['Lake View', 'Dock', 'Hot Tub', 'Fireplace', 'Garage'],
+    amenities: ['چشم‌انداز دریاچه', 'اسکله', 'جکوزی', 'شومینه', 'گاراژ'],
     images: gallery([
       '1787491581005-76861ea79bf8',
       '1591474200742-8e512e6f98f8',
@@ -350,28 +350,28 @@ export const properties: Property[] = [
   {
     id: '8',
     slug: 'architectural-downtown-penthouse',
-    name: 'Architectural Downtown Penthouse',
-    location: 'Austin, Texas, USA',
+    name: 'پنت‌هاوس معماری مرکز شهر',
+    location: 'آستین، تگزاس، آمریکا',
     city: 'Austin',
     state: 'Texas',
     country: 'USA',
     price: 1_850_000,
-    type: 'Penthouse',
+    type: 'پنت‌هاوس',
     bedrooms: 3,
     bathrooms: 3,
     sqft: 3200,
     yearBuilt: 2023,
     description:
-      'A full-floor penthouse in downtown Austin with 360-degree skyline views. The interior features polished concrete, custom millwork, and a wrap-around terrace. Building amenities include a rooftop pool, fitness center, and 24-hour concierge.',
+      'پنت‌هاوس یک طبقه کامل در مرکز آستین با چشم‌انداز ۳۶۰ درجه افق شهر. فضای داخلی دارای بتن صیقلی، نجاری سفارشی و تراس دوردار است. امکانات ساختمان شامل استخر پشت بام، مرکز تناسب اندام و نگهبان ۲۴ ساعته است.',
     features: [
-      '360-degree skyline views',
-      'Wrap-around terrace',
-      'Polished concrete floors',
-      'Custom Italian millwork',
-      'Gourmet chef\'s kitchen',
-      'Building rooftop pool',
+      'چشم‌انداز ۳۶۰ درجه افق شهر',
+      'تراس دوردار',
+      'کف‌پوش بتن صیقلی',
+      'نجاری سفارشی ایتالیایی',
+      'آشپزخانه گورمه حرفه‌ای',
+      'استخر پشت بام ساختمان',
     ],
-    amenities: ['City View', 'Pool', 'Gym', 'Concierge', 'Terrace', 'Smart Home'],
+    amenities: ['چشم‌انداز شهر', 'استخر', 'باشگاه', 'نگهبان', 'تراس', 'خانه هوشمند'],
     images: gallery([
       '1545324418-cc1a3fa10c00',
       '1502672260266-1c1ef2d93688',
@@ -392,40 +392,40 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    number: '01',
-    title: 'Luxury Home Sales',
+    number: '۰۱',
+    title: 'فروش خانه لوکس',
     description:
-      'Curated representation for distinguished properties, connecting discerning sellers with qualified buyers through targeted marketing and global reach.',
+      'نمایندگی تخصصی برای املاک متمایز، پیوند فروشندگان آگاه با خریداران واجد شرایط از طریق بازاریابی هدفمند و دسترسی جهانی.',
   },
   {
-    number: '02',
-    title: 'Property Investment',
+    number: '۰۲',
+    title: 'سرمایه‌گذاری ملک',
     description:
-      'Strategic investment advisory backed by deep market intelligence, identifying high-growth opportunities and maximizing long-term portfolio value.',
+      'مشاوره سرمایه‌گذاری راهبردی با هوش بازار عمیق، شناسایی فرصت‌های رشد بالا و حداکثرسازی ارزش بلندمدت پرتفوی.',
   },
   {
-    number: '03',
-    title: 'Property Marketing',
+    number: '۰۳',
+    title: 'بازاریابی ملک',
     description:
-      'Award-winning visual storytelling — cinematic photography, film, and editorial-grade materials that position each property as a singular offering.',
+      'داستان‌سرایی بصری برنده جایزه — عکاسی سینمایی، فیلم و مطالب سطح تحریری که هر ملک را به عنوان یک عرضه منحصر به فرد معرفی می‌کند.',
   },
   {
-    number: '04',
-    title: 'Real Estate Advisory',
+    number: '۰۴',
+    title: 'مشاوره املاک',
     description:
-      'Confidential guidance through every stage of acquisition and disposition, with a focus on integrity, discretion, and client outcomes.',
+      'راهنمایی محرمانه در هر مرحله از تحصیل و واگذاری، با تمرکز بر صداقت، رازداری و نتایج مشتری.',
   },
   {
-    number: '05',
-    title: 'Property Valuation',
+    number: '۰۵',
+    title: 'ارزیابی ملک',
     description:
-      'Precise, defensible valuations grounded in comparable data, construction analysis, and an intimate understanding of micro-market dynamics.',
+      'ارزیابی‌های دقیق و قابل دفاع مبتنی بر داده قابل مقایسه، تحلیل ساخت و درک عمیق پویایی‌های میکرو-بازار.',
   },
   {
-    number: '06',
-    title: 'Relocation Services',
+    number: '۰۶',
+    title: 'خدمات نقل مکان',
     description:
-      'End-to-end relocation support — from neighborhood discovery and school placement to move-in readiness, ensuring a seamless transition.',
+      'پشتیبانی نقل مکان سرتاسری — از کشف محله و جایابی مدرسه تا آمادگی ورود، اطمینان از انتقال بی‌وقفه.',
   },
 ];
 
@@ -440,29 +440,29 @@ export interface TeamMember {
 
 export const team: TeamMember[] = [
   {
-    name: 'Daniel Morgan',
-    role: 'Managing Director',
+    name: 'دنیل مورگان',
+    role: 'مدیرعامل',
     image: img('1507003211169-0a1dd7228f2d', 500, 600),
     email: 'daniel@horizonproperties.com',
     phone: '(555) 246-7890',
   },
   {
-    name: 'Olivia Carter',
-    role: 'Luxury Property Advisor',
+    name: 'اولیویا کارتر',
+    role: 'مشاور املاک لوکس',
     image: img('1438761681033-6461ffad8d80', 500, 600),
     email: 'olivia@horizonproperties.com',
     phone: '(555) 246-7891',
   },
   {
-    name: 'James Wilson',
-    role: 'Investment Consultant',
+    name: 'جیمز ویلسون',
+    role: 'مشاور سرمایه‌گذاری',
     image: img('1500648767791-00dcc994a43e', 500, 600),
     email: 'james@horizonproperties.com',
     phone: '(555) 246-7892',
   },
   {
-    name: 'Sophia Bennett',
-    role: 'Senior Property Specialist',
+    name: 'سوفیا بنت',
+    role: 'متخصص ارشد املاک',
     image: img('1524504388940-b1c1722653e1', 500, 600),
     email: 'sophia@horizonproperties.com',
     phone: '(555) 246-7893',
@@ -478,37 +478,37 @@ export interface Reason {
 
 export const reasons: Reason[] = [
   {
-    number: '01',
-    title: 'Trusted Expertise',
+    number: '۰۱',
+    title: 'تخصص معتبر',
     description:
-      'Over two decades of experience in luxury real estate, with a track record of successful transactions across prime markets.',
+      'بیش از دو دهه تجربه در املاک لوکس، با سابقه موفق تراکنش‌ها در بازارهای برتر.',
   },
   {
-    number: '02',
-    title: 'Global Network',
+    number: '۰۲',
+    title: 'شبکه جهانی',
     description:
-      'A connected network of buyers, sellers, and partners across continents, giving your property unparalleled exposure.',
+      'شبکه متصل خریداران، فروشندگان و شرکا در سراسر قاره‌ها، که به ملک شما بازخورد بی‌نظیری می‌دهد.',
   },
   {
-    number: '03',
-    title: 'Discretion & Integrity',
+    number: '۰۳',
+    title: 'رازداری و صداقت',
     description:
-      'Every transaction is handled with the utmost confidentiality and transparency, building trust that lasts beyond the sale.',
+      'هر تراکنش با نهایت محرمانگی و شفافیت انجام می‌شود، اعتمادی که فراتر از فروش دوام می‌آورد.',
   },
   {
-    number: '04',
-    title: 'Data-Driven Insights',
+    number: '۰۴',
+    title: 'بینش مبتنی بر داده',
     description:
-      'Investment decisions backed by rigorous market analysis, comparable data, and forward-looking trend intelligence.',
+      'تصمیمات سرمایه‌گذاری پشتیبانی شده با تحلیل دقیق بازار، داده‌های قابل مقایسه و هوش روند آینده‌نگر.',
   },
 ];
 
 // ─── Stats ─────────────────────────────────────────────────
 export const stats = [
-  { value: '750+', label: 'Properties Sold' },
-  { value: '$4.2B', label: 'Total Sales Volume' },
-  { value: '25', label: 'Years of Excellence' },
-  { value: '98%', label: 'Client Satisfaction' },
+  { value: '۷۵۰+', label: 'ملک فروخته شده' },
+  { value: '۴.۲ میلیارد $', label: 'حجم کل فروش' },
+  { value: '۲۵', label: 'سال تجربه' },
+  { value: '۹۸٪', label: 'رضایت مشتری' },
 ];
 
 // ─── Helpers ───────────────────────────────────────────────
@@ -531,5 +531,5 @@ export function getSimilarProperties(property: Property, count = 3): Property[] 
     .slice(0, count);
 }
 
-export const propertyTypes = ['Villa', 'House', 'Estate', 'Residence', 'Penthouse', 'Apartment'] as const;
-export const locations = ['Austin, Texas', 'Malibu, California', 'Scottsdale, Arizona', 'Miami, Florida', 'Los Angeles, California', 'Beverly Hills, California', 'Lake Tahoe, Nevada'];
+export const propertyTypes = ['ویلا', 'خانه', 'ملک', 'اقامتگاه', 'پنت‌هاوس', 'آپارتمان'] as const;
+export const locations = ['آستین، تگزاس', 'مالیبو، کالیفرنیا', 'اسکاتس‌دیل، آریزونا', 'میامی، فلوریدا', 'لس‌آنجلس، کالیفرنیا', 'بورلی هیلز، کالیفرنیا', 'لیک تاهو، نوادا'];

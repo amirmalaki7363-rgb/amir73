@@ -12,11 +12,11 @@ export default function FeaturedProperties() {
     <section className="bg-ivory py-section">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <ScrollReveal className="text-center mb-12 lg:mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-champagne font-medium font-sans">
-            Featured
+          <span className="text-sm tracking-[0.15em] text-champagne font-medium font-sans">
+            ویژه
           </span>
           <h2 className="mt-4 font-serif text-section text-navy font-bold">
-            Featured Properties
+            املاک منتخب
           </h2>
         </ScrollReveal>
 
@@ -34,7 +34,7 @@ export default function FeaturedProperties() {
 
         <ScrollReveal delay={150} className="text-center mt-12">
           <Button href="/properties" variant="primary" showArrow>
-            View All Properties
+            مشاهده همه املاک
           </Button>
         </ScrollReveal>
       </div>

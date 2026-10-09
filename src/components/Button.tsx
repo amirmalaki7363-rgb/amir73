@@ -56,7 +56,7 @@ export default function Button({
     <>
       <span>{children}</span>
       {showArrow && (
-        <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 ease-luxury group-hover:translate-x-1" />
+        <ArrowRightIcon className="w-4 h-4 ltr-arrow transition-transform duration-500 ease-luxury group-hover:translate-x-1" />
       )}
     </>
   );

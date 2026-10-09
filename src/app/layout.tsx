@@ -1,26 +1,21 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Vazirmatn } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
+const vazirmatn = Vazirmatn({
+  subsets: ['arabic', 'latin'],
+  variable: '--font-vazir',
   display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  title: 'Horizon Properties | Premium Real Estate & Investments',
+  title: 'هورایزن | املاک لوکس و سرمایه‌گذاری',
   description:
-    'Discover exceptional homes and investment properties in prime locations. Horizon Properties connects you with extraordinary real estate worldwide.',
-  keywords: ['luxury real estate', 'premium properties', 'investment properties', 'modern homes'],
+    'کشف خانه‌های استثنایی و املاک سرمایه‌گذاری در بهترین موقعیت‌ها. هورایزن شما را با املاک فوق‌العاده در سراسر جهان آشنا می‌کند.',
+  keywords: ['املاک لوکس', 'ملک‌های premium', 'املاک سرمایه‌گذاری', 'خانه‌های مدرن'],
 };
 
 export default function RootLayout({
@@ -29,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="fa" dir="rtl" className={vazirmatn.variable}>
       <body>
         <Header />
         <main>{children}</main>

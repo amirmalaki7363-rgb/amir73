@@ -17,7 +17,7 @@ export default function NewsletterForm() {
 
   if (submitted) {
     return (
-      <p className="text-sm text-champagne">Thank you for subscribing!</p>
+      <p className="text-sm text-champagne">از اشتراک شما سپاسگزاریم!</p>
     );
   }
 
@@ -25,8 +25,8 @@ export default function NewsletterForm() {
     <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <input
         type="email"
-        placeholder="Your email address"
-        aria-label="Email address"
+        placeholder="ایمیل شما"
+        aria-label="ایمیل"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
@@ -34,10 +34,10 @@ export default function NewsletterForm() {
       />
       <button
         type="submit"
-        className="group inline-flex items-center justify-center gap-2 w-full bg-champagne text-navy px-5 py-3 text-sm font-medium uppercase tracking-wide hover:bg-champagne-light transition-colors min-h-[48px]"
+        className="group inline-flex items-center justify-center gap-2 w-full bg-champagne text-navy px-5 py-3 text-sm font-medium tracking-wide hover:bg-champagne-light transition-colors min-h-[48px]"
       >
-        Subscribe
-        <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        اشتراک
+        <ArrowRightIcon className="w-4 h-4 ltr-arrow transition-transform duration-500 group-hover:translate-x-1" />
       </button>
     </form>
   );

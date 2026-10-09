@@ -27,6 +27,22 @@
     overflow-x: hidden;
   }
 
+  /* Persian numbers font rendering */
+  body {
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  /* RTL: flip arrow icons that use transform for direction */
+  [dir="rtl"] .group:hover .rtl-flip,
+  [dir="rtl"] .group:hover .ltr-arrow {
+    transform: scaleX(-1) translateX(2px);
+  }
+
+  /* RTL: default arrow flip for left-pointing arrows */
+  [dir="rtl"] .ltr-arrow {
+    transform: scaleX(-1);
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }

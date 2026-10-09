@@ -25,8 +25,9 @@ export default function PropertyGallery({ images, alt }: PropertyGalleryProps) {
     if (!fullscreen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setFullscreen(false);
-      if (e.key === 'ArrowRight') goNext();
-      if (e.key === 'ArrowLeft') goPrev();
+      // RTL: ArrowLeft = next (reading direction), ArrowRight = prev
+      if (e.key === 'ArrowLeft') goNext();
+      if (e.key === 'ArrowRight') goPrev();
     };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -58,35 +59,35 @@ export default function PropertyGallery({ images, alt }: PropertyGalleryProps) {
           {/* Expand button */}
           <button
             onClick={() => setFullscreen(true)}
-            aria-label="View fullscreen"
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-champagne transition-colors opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            aria-label="مشاهده تمام صفحه"
+            className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-champagne transition-colors opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <ExpandIcon className="w-4 h-4" />
           </button>
 
-          {/* Nav arrows */}
+          {/* Nav arrows — RTL: prev on right, next on left */}
           {images.length > 1 && (
             <>
               <button
                 onClick={goPrev}
-                aria-label="Previous image"
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-white transition-colors"
-              >
-                <ChevronLeftIcon className="w-5 h-5" />
-              </button>
-              <button
-                onClick={goNext}
-                aria-label="Next image"
+                aria-label="تصویر قبلی"
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-white transition-colors"
               >
                 <ChevronRightIcon className="w-5 h-5" />
+              </button>
+              <button
+                onClick={goNext}
+                aria-label="تصویر بعدی"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-white transition-colors"
+              >
+                <ChevronLeftIcon className="w-5 h-5" />
               </button>
             </>
           )}
 
           {/* Counter */}
-          <div className="absolute bottom-4 right-4 bg-navy/80 text-white px-3 py-1.5 text-xs font-medium">
-            {activeIndex + 1} / {images.length}
+          <div className="absolute bottom-4 left-4 bg-navy/80 text-white px-3 py-1.5 text-xs font-medium">
+            {(activeIndex + 1).toLocaleString('fa-IR')} / {images.length.toLocaleString('fa-IR')}
           </div>
         </div>
 
@@ -115,32 +116,33 @@ export default function PropertyGallery({ images, alt }: PropertyGalleryProps) {
         <div className="fixed inset-0 z-[100] bg-navy/95 flex items-center justify-center animate-fade-in">
           <button
             onClick={() => setFullscreen(false)}
-            aria-label="Close fullscreen"
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors z-10"
+            aria-label="بستن تمام صفحه"
+            className="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors z-10"
           >
             <CloseIcon className="w-6 h-6" />
           </button>
+          {/* RTL: prev on right, next on left */}
           <button
             onClick={goPrev}
-            aria-label="Previous image"
-            className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
-          >
-            <ChevronLeftIcon className="w-6 h-6" />
-          </button>
-          <img
-            src={images[activeIndex]}
-            alt={`${alt} — fullscreen view`}
-            className="max-w-[90vw] max-h-[85vh] object-contain"
-          />
-          <button
-            onClick={goNext}
-            aria-label="Next image"
+            aria-label="تصویر قبلی"
             className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
           >
             <ChevronRightIcon className="w-6 h-6" />
           </button>
+          <img
+            src={images[activeIndex]}
+            alt={`${alt} — نمایش تمام صفحه`}
+            className="max-w-[90vw] max-h-[85vh] object-contain"
+          />
+          <button
+            onClick={goNext}
+            aria-label="تصویر بعدی"
+            className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+          >
+            <ChevronLeftIcon className="w-6 h-6" />
+          </button>
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-            {activeIndex + 1} / {images.length}
+            {(activeIndex + 1).toLocaleString('fa-IR')} / {images.length.toLocaleString('fa-IR')}
           </div>
         </div>
       )}

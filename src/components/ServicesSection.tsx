@@ -6,14 +6,14 @@ export default function ServicesSection() {
     <section id="services" className="bg-white py-section">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <ScrollReveal className="text-center mb-12 lg:mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-champagne font-medium font-sans">
-            What We Do
+          <span className="text-sm tracking-[0.15em] text-champagne font-medium font-sans">
+            کارهای ما
           </span>
           <h2 className="mt-4 font-serif text-section text-navy font-bold">
-            Our Services
+            خدمات ما
           </h2>
           <p className="mt-4 text-near-black/60 text-lg max-w-2xl mx-auto">
-            Comprehensive real estate solutions tailored to the needs of discerning clients.
+            راه‌حل‌های جامع املاک متناسب با نیازهای مشتریان متمایز.
           </p>
         </ScrollReveal>
 

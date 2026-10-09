@@ -20,13 +20,20 @@ export default function PropertyCarousel({ children, className = '' }: PropertyC
   const updateScrollState = useCallback(() => {
     const el = scrollRef.current;
     if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 5);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 5);
+    // In RTL, scrollLeft is negative (or positive depending on browser).
+    // We normalize: can scroll in "right" direction if not at the end.
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    const current = Math.abs(el.scrollLeft);
+    setCanScrollLeft(current > 5);
+    setCanScrollRight(current < maxScroll - 5);
   }, []);
 
   const scrollByAmount = (dir: number) => {
     const el = scrollRef.current;
     if (!el) return;
+    // In RTL, positive dir should move "left" visually, which is scrollBy positive
+    // But since the page is RTL, the natural reading direction is right-to-left,
+    // so "next" (dir=1) should scroll to the left (visually next item)
     const amount = el.clientWidth * 0.7 * dir;
     el.scrollBy({ left: amount, behavior: 'smooth' });
   };
@@ -69,11 +76,11 @@ export default function PropertyCarousel({ children, className = '' }: PropertyC
         onMouseLeave={endDrag}
         className="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-2 select-none cursor-grab"
         role="region"
-        aria-label="Property carousel"
+        aria-label="گالری املاک"
         tabIndex={0}
         onKeyDown={(e) => {
-          if (e.key === 'ArrowLeft') scrollByAmount(-1);
           if (e.key === 'ArrowRight') scrollByAmount(1);
+          if (e.key === 'ArrowLeft') scrollByAmount(-1);
         }}
       >
         {children.map((child, i) => (
@@ -87,28 +94,28 @@ export default function PropertyCarousel({ children, className = '' }: PropertyC
       <button
         onClick={() => scrollByAmount(-1)}
         disabled={!canScrollLeft}
-        aria-label="Previous properties"
+        aria-label="املاک قبلی"
         className={cn(
-          'absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-all duration-500 ease-luxury hidden md:flex',
+          'absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-all duration-500 ease-luxury hidden md:flex',
           canScrollLeft
             ? 'opacity-100 hover:bg-navy hover:text-white'
             : 'opacity-0 pointer-events-none'
         )}
       >
-        <ChevronLeftIcon className="w-5 h-5" />
+        <ChevronRightIcon className="w-5 h-5" />
       </button>
       <button
         onClick={() => scrollByAmount(1)}
         disabled={!canScrollRight}
-        aria-label="Next properties"
+        aria-label="املاک بعدی"
         className={cn(
-          'absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-all duration-500 ease-luxury hidden md:flex',
+          'absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-white text-navy shadow-lg flex items-center justify-center transition-all duration-500 ease-luxury hidden md:flex',
           canScrollRight
             ? 'opacity-100 hover:bg-navy hover:text-white'
             : 'opacity-0 pointer-events-none'
         )}
       >
-        <ChevronRightIcon className="w-5 h-5" />
+        <ChevronLeftIcon className="w-5 h-5" />
       </button>
     </div>
   );

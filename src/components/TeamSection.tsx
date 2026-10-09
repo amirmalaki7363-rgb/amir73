@@ -7,15 +7,14 @@ export default function TeamSection() {
     <section id="team" className="bg-ivory py-section">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <ScrollReveal className="text-center mb-12 lg:mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-champagne font-medium font-sans">
-            Our Team
+          <span className="text-sm tracking-[0.15em] text-champagne font-medium font-sans">
+            تیم ما
           </span>
           <h2 className="mt-4 font-serif text-section text-navy font-bold">
-            Meet the Experts
+            آشنایی با متخصصان
           </h2>
           <p className="mt-4 text-near-black/60 text-lg max-w-2xl mx-auto">
-            A dedicated team of professionals with deep market knowledge and a passion for
-            exceptional service.
+            تیمی متخصص از حرفه‌ای‌ها با دانش عمیق بازار و اشتیاق برای خدمات استثنایی.
           </p>
         </ScrollReveal>
 
@@ -34,14 +33,14 @@ export default function TeamSection() {
                   <div className="flex gap-3">
                     <a
                       href={`mailto:${member.email}`}
-                      aria-label={`Email ${member.name}`}
+                      aria-label={`ایمیل به ${member.name}`}
                       className="w-10 h-10 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-champagne transition-colors"
                     >
                       <MailIcon className="w-4 h-4" />
                     </a>
                     <a
                       href={`tel:${member.phone.replace(/\D/g, '')}`}
-                      aria-label={`Call ${member.name}`}
+                      aria-label={`تماس با ${member.name}`}
                       className="w-10 h-10 rounded-full bg-white/90 text-navy flex items-center justify-center hover:bg-champagne transition-colors"
                     >
                       <PhoneIcon className="w-4 h-4" />
@@ -51,7 +50,7 @@ export default function TeamSection() {
               </div>
               <div className="mt-4 text-center">
                 <h3 className="font-serif text-lg text-navy font-bold">{member.name}</h3>
-                <p className="text-sm text-champagne mt-1 uppercase tracking-wide">
+                <p className="text-sm text-champagne mt-1 tracking-wide">
                   {member.role}
                 </p>
               </div>

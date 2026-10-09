@@ -7,12 +7,12 @@ import { cn } from '@/lib/utils';
 import { HouseIcon, PhoneIcon, MenuIcon, CloseIcon } from './Icons';
 
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Properties', href: '/properties' },
-  { label: 'About Us', href: '/#about' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Team', href: '/#team' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'خانه', href: '/' },
+  { label: 'املاک', href: '/properties' },
+  { label: 'درباره ما', href: '/#about' },
+  { label: 'خدمات', href: '/#services' },
+  { label: 'تیم', href: '/#team' },
+  { label: 'تماس', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -52,7 +52,7 @@ export default function Header() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="flex items-center justify-between h-20 lg:h-[88px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group shrink-0" aria-label="Horizon Properties home">
+            <Link href="/" className="flex items-center gap-3 group shrink-0" aria-label="هورایزن املاک">
               <HouseIcon
                 className={cn(
                   'w-7 h-7 transition-colors duration-500',
@@ -66,21 +66,21 @@ export default function Header() {
                     isTransparent ? 'text-white' : 'text-navy'
                   )}
                 >
-                  HORIZON
+                  هورایزن
                 </span>
                 <span
                   className={cn(
-                    'text-[10px] tracking-[0.25em] uppercase font-sans transition-colors duration-500',
+                    'text-[10px] tracking-[0.15em] font-sans transition-colors duration-500',
                     isTransparent ? 'text-white/70' : 'text-navy/50'
                   )}
                 >
-                  Properties
+                  املاک
                 </span>
               </div>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-9" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-center gap-9" aria-label="منوی اصلی">
               {navLinks.map((link) => {
                 const active =
                   link.href === '/' ? pathname === '/' : pathname.startsWith(link.href.split('#')[0]) && link.href !== '/';
@@ -102,7 +102,7 @@ export default function Header() {
                     {link.label}
                     <span
                       className={cn(
-                        'absolute -bottom-0.5 left-0 h-px bg-champagne transition-all duration-500 ease-luxury',
+                        'absolute -bottom-0.5 right-0 h-px bg-champagne transition-all duration-500 ease-luxury',
                         active ? 'w-full' : 'w-0 group-hover:w-full'
                       )}
                     />
@@ -123,7 +123,7 @@ export default function Header() {
                 )}
               >
                 <PhoneIcon className="w-4 h-4" />
-                (555) 246-7890
+                ۰۲۱-۸۸۷۷۶۶۵۵
               </a>
             </div>
 
@@ -134,7 +134,7 @@ export default function Header() {
                 isTransparent ? 'text-white' : 'text-navy'
               )}
               onClick={() => setMenuOpen(true)}
-              aria-label="Open menu"
+              aria-label="باز کردن منو"
             >
               <MenuIcon className="w-7 h-7" />
             </button>
@@ -152,31 +152,31 @@ export default function Header() {
         <div className="absolute inset-0 bg-navy/40 backdrop-blur-sm" onClick={() => setMenuOpen(false)} />
         <div
           className={cn(
-            'absolute right-0 top-0 h-full w-[85%] max-w-sm bg-navy shadow-2xl transition-transform duration-500 ease-luxury flex flex-col',
-            menuOpen ? 'translate-x-0' : 'translate-x-full'
+            'absolute left-0 top-0 h-full w-[85%] max-w-sm bg-navy shadow-2xl transition-transform duration-500 ease-luxury flex flex-col',
+            menuOpen ? 'translate-x-0' : '-translate-x-full'
           )}
         >
           <div className="flex items-center justify-between px-6 h-20 border-b border-white/10">
             <div className="flex items-center gap-3">
               <HouseIcon className="w-6 h-6 text-champagne" />
-              <span className="font-serif text-lg text-white tracking-wide">HORIZON</span>
+              <span className="font-serif text-lg text-white tracking-wide">هورایزن</span>
             </div>
             <button
               className="text-white/80 hover:text-white p-2 transition-colors"
               onClick={() => setMenuOpen(false)}
-              aria-label="Close menu"
+              aria-label="بستن منو"
             >
               <CloseIcon className="w-6 h-6" />
             </button>
           </div>
-          <nav className="flex flex-col px-6 py-8 gap-1" aria-label="Mobile navigation">
+          <nav className="flex flex-col px-6 py-8 gap-1" aria-label="منوی موبایل">
             {navLinks.map((link, i) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className={cn(
                   'text-lg font-medium py-3.5 border-b border-white/5 transition-all duration-500 ease-luxury',
-                  menuOpen ? 'text-white translate-x-0 opacity-100' : 'text-white translate-x-4 opacity-0'
+                  menuOpen ? 'text-white translate-x-0 opacity-100' : 'text-white -translate-x-4 opacity-0'
                 )}
                 style={{ transitionDelay: menuOpen ? `${i * 60 + 100}ms` : '0ms' }}
               >
@@ -190,7 +190,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2.5 w-full px-5 py-4 border border-champagne/50 text-champagne text-sm font-medium tracking-wide hover:bg-champagne hover:text-navy transition-all duration-500 min-h-[48px]"
             >
               <PhoneIcon className="w-4 h-4" />
-              (555) 246-7890
+              ۰۲۱-۸۸۷۷۶۶۵۵
             </a>
           </div>
         </div>

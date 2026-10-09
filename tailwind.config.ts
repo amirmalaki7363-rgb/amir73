@@ -29,12 +29,12 @@ const config: Config = {
         'off-white': '#F4F7F9',
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-vazir)', 'Vazirmatn', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-vazir)', 'Vazirmatn', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
-        'section': ['clamp(2rem, 4vw, 3.25rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        'hero': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.1', letterSpacing: '0em' }],
+        'section': ['clamp(2rem, 4vw, 3.25rem)', { lineHeight: '1.15', letterSpacing: '0em' }],
       },
       spacing: {
         'section': 'clamp(4rem, 10vw, 7.5rem)',

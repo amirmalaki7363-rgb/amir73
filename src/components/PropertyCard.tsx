@@ -32,11 +32,11 @@ export default function PropertyCard({ property, variant = 'default', className 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         {/* Price badge */}
-        <div className="absolute bottom-4 right-4 bg-navy/85 backdrop-blur-sm text-white px-4 py-2 text-sm font-medium">
+        <div className="absolute bottom-4 left-4 bg-navy/85 backdrop-blur-sm text-white px-4 py-2 text-sm font-medium">
           {formatPrice(property.price)}
         </div>
         {/* Type tag */}
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-navy px-3 py-1 text-xs uppercase tracking-wide font-medium">
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-navy px-3 py-1 text-xs tracking-wide font-medium">
           {property.type}
         </div>
       </div>
@@ -55,15 +55,15 @@ export default function PropertyCard({ property, variant = 'default', className 
         <div className="flex items-center gap-5 mt-auto pt-3 border-t border-navy/5 text-sm text-near-black/60">
           <span className="flex items-center gap-1.5">
             <BedIcon className="w-4 h-4 text-champagne/70" />
-            {property.bedrooms}
+            {property.bedrooms.toLocaleString('fa-IR')}
           </span>
           <span className="flex items-center gap-1.5">
             <BathIcon className="w-4 h-4 text-champagne/70" />
-            {property.bathrooms}
+            {property.bathrooms.toLocaleString('fa-IR')}
           </span>
           <span className="flex items-center gap-1.5">
             <RulerIcon className="w-4 h-4 text-champagne/70" />
-            {property.sqft.toLocaleString()} ft²
+            {property.sqft.toLocaleString('fa-IR')} متر²
           </span>
         </div>
       </div>
