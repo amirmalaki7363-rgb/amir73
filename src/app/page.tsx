@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero';
+import ScrollVideoHero from '@/components/ScrollVideoHero';
 import AboutSection from '@/components/AboutSection';
 import FeaturedProperties from '@/components/FeaturedProperties';
 import ServicesSection from '@/components/ServicesSection';
@@ -9,7 +9,7 @@ import CTASection from '@/components/CTASection';
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <ScrollVideoHero />
       <AboutSection />
       <FeaturedProperties />
       <ServicesSection />
