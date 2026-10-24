@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear().toLocaleString('fa-IR')} هورایزن املاک. تمام حقوق محفوظ است.
+            © {new Date().getFullYear().toLocaleString('fa-IR', { useGrouping: false })} هورایزن املاک. تمام حقوق محفوظ است.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-xs text-white/40 hover:text-white/70 transition-colors">
