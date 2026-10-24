@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode, type ElementType } from 'react';
 import { cn } from '@/lib/utils';
 
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
 }
 
 export default function ScrollReveal({
@@ -39,7 +39,7 @@ export default function ScrollReveal({
 
   return (
     <Tag
-      ref={ref as any}
+      ref={ref}
       className={cn('reveal', visible && 'is-visible', className)}
       style={{ transitionDelay: `${delay}ms` }}
     >
