@@ -118,6 +118,8 @@ export default function HeroVideo() {
             <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
+        <span className="hero-neon hero-neon--cafe" aria-hidden="true">Cafe</span>
+        <span className="hero-neon hero-neon--horizon" aria-hidden="true">Horizon</span>
         <div className="hero-progress" aria-hidden="true"><i ref={barRef} /></div>
       </div>
     </section>
